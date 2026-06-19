@@ -1,0 +1,47 @@
+name: EasyChat
+version: '${version}'
+main: liasykua.easychat.EasyChat
+api-version: '1.21'
+authors: [ LiasykUA ]
+depend: [LuckPerms]
+description: Гнучкий та простий чат-плагін з локальним, глобальним та приватним повідомленнями.
+
+commands:
+  msg:
+    description: Надіслати приватне повідомлення гравцеві.
+    usage: /msg <гравець> <повідомлення>
+  reply:
+    description: Відповісти на останнє приватне повідомлення.
+    usage: /reply <повідомлення>
+  ignore:
+    description: Увімкнути/вимкнути ігнорування приватних повідомлень від гравця.
+    usage: /ignore <гравець>
+  spy:
+    description: Увімкнути/вимкнути режим соціального шпигунства.
+    usage: /spy
+  clearchat:
+    description: Очистити чат для всіх гравців.
+    usage: /clearchat
+  easychatreload:
+    description: Перезавантажити конфігурацію EasyChat.
+    usage: /easychatreload
+
+permissions:
+  easychat.chat.local:
+    description: Дозволяє писати в локальному чаті.
+    default: true
+  easychat.chat.global:
+    description: Дозволяє писати в глобальному чаті (префікс !).
+    default: true
+  easychat.chat.personal:
+    description: Дозволяє використовувати /msg та /reply.
+    default: true
+  easychat.spy:
+    description: Дозволяє вмикати соціальне шпигунство командою /spy.
+    default: op
+  easychat.clearchat:
+    description: Дозволяє очищати чат командою /clearchat.
+    default: op
+  easychat.reload:
+    description: Дозволяє перезавантажувати плагін командою /easychatreload.
+    default: op
